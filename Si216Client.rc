@@ -1,0 +1,414 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Si216Client.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Si216Client.ico"
+IDI_blue                ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_background          ICON    DISCARDABLE     "res\\blue1.ico"
+IDI_yellow              ICON    DISCARDABLE     "res\\blue2.ico"
+IDI_normal              ICON    DISCARDABLE     "res\\backgrou.ico"
+IDI_fault               ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_alarm               ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_grey                ICON    DISCARDABLE     "res\\ico00003.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 Si216Client"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Si216Client 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2012",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_SI216CLIENT_DIALOG DIALOGEX 0, 0, 420, 311
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BGK-FBG-8600-S-计算软件 2.9"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "退出",IDOK,362,192,50,30
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,7,7,353,292
+    ICON            IDI_blue,IDC_blue,382,239,20,20
+    ICON            IDI_background,IDC_background,381,239,20,20
+    ICON            IDI_yellow,IDC_yellow,381,239,20,20
+    LTEXT           "未收到数据",IDC_dataErr,368,269,47,17
+    ICON            IDI_normal,IDC_normal,368,20,20,20
+    ICON            IDI_fault,IDC_fault,368,45,20,20
+    ICON            IDI_alarm,IDC_alarm,368,70,20,20
+    LTEXT           "正常",IDC_STATIC,393,25,19,9
+    LTEXT           "故障",IDC_STATIC,393,50,19,9
+    LTEXT           "报警",IDC_STATIC,393,75,19,9
+    ICON            IDI_grey,IDC_grey1,368,20,20,20
+    ICON            IDI_grey,IDC_grey2,368,45,20,20
+    ICON            IDI_grey,IDC_grey3,368,70,20,20
+    PUSHBUTTON      "开始",IDC_start,362,156,46,32
+END
+
+IDD_WaveSheet DIALOG DISCARDABLE  0, 0, 345, 213
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,1,1,334,188
+    EDITTEXT        IDC_Count1,53,194,41,14,ES_AUTOHSCROLL
+    LTEXT           "接收包数",IDC_STATIC,12,196,33,10
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    43,105,80,14
+    EDITTEXT        IDC_maxCycle,173,194,49,14,ES_AUTOHSCROLL
+    LTEXT           "帧号差",IDC_STATIC,141,197,28,8
+END
+
+IDD_Strain DIALOG DISCARDABLE  0, 0, 345, 227
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_SMALLICON | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,2,0,338,195
+    LTEXT           "calMiddNum",IDC_STATIC,41,207,40,10
+    EDITTEXT        IDC_calMidd,87,204,53,18,ES_AUTOHSCROLL
+END
+
+IDD_ParaSet DIALOG DISCARDABLE  0, 0, 350, 274
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_COMBO1,89,7,70,208,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "List2",IDC_LIST2,"SysListView32",LVS_SMALLICON | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | 
+                    WS_TABSTOP,0,25,347,102
+    LTEXT           "通道选择",IDC_STATIC,51,11,32,9
+    LTEXT           "ID",IDC_STATIC,20,135,16,9
+    LTEXT           "类型",IDC_STATIC,57,135,18,9
+    LTEXT           "单位",IDC_STATIC,89,135,16,9
+    LTEXT           "原始波长λ0",IDC_STATIC,109,135,46,9
+    LTEXT           "波长下限",IDC_STATIC,156,135,32,9
+    LTEXT           "波长上限",IDC_STATIC,197,135,32,9
+    LTEXT           "报警上限",IDC_STATIC,269,135,32,9
+    LTEXT           "报警下限",IDC_STATIC,233,135,35,9
+    LTEXT           "温度系数",IDC_STATIC,251,224,32,9,NOT WS_VISIBLE
+    LTEXT           "温补ID",IDC_STATIC,11,168,29,9
+    LTEXT           "温补系数B",IDC_STATIC,250,222,39,9,NOT WS_VISIBLE
+    LTEXT           "屏蔽",IDC_STATIC,28,203,19,9
+    LTEXT           "地理位置",IDC_STATIC,93,203,35,9
+    LTEXT           "备注",IDC_STATIC,178,203,20,9
+    EDITTEXT        IDC_id,0,148,44,18,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_type,47,148,35,18,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_orignWave,111,148,38,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_leftWave,151,148,43,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_rightWave,196,148,32,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_orignTemp,245,222,37,18,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_tempCoeff,242,221,40,18,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_alarmMin,231,148,33,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_alarmMax,267,148,37,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_tempCompID,4,181,41,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_tempCompCoeff,246,222,37,18,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_position,71,215,79,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_note,171,215,75,19,ES_AUTOHSCROLL
+    EDITTEXT        IDC_unit,85,148,24,18,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_k,242,222,35,18,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    CONTROL         "初始温度T0",IDC_STATIC,"Static",SS_SIMPLE | SS_NOPREFIX | 
+                    SS_CENTERIMAGE | NOT WS_VISIBLE | WS_GROUP,244,225,41,9
+    CONTROL         "",IDC_shield,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,
+                    218,8,11
+    PUSHBUTTON      "修改",IDC_accept,293,175,54,18
+    PUSHBUTTON      "添加参数",IDC_addPara,293,200,53,18
+    LTEXT           "result = a(λ-λ0)^2+b(λ-λ0)+C-k(d(λt-λt0)^2+e(λt-λt0)+f)",
+                    IDC_STATIC,2,260,258,11,NOT WS_VISIBLE
+    PUSHBUTTON      "读取参数表",IDC_ReadParameter,243,205,47,11,NOT 
+                    WS_VISIBLE
+    PUSHBUTTON      "删除参数",IDC_delete,293,226,53,18
+    PUSHBUTTON      "配对测试",IDC_BUTTON1,293,253,53,18,NOT WS_VISIBLE
+    LTEXT           "传感系数K",IDC_STATIC,243,224,37,9,NOT WS_VISIBLE
+    LTEXT           "a",IDC_STATIC,73,171,10,8
+    LTEXT           "b",IDC_STATIC,133,171,10,8
+    LTEXT           "c",IDC_STATIC,256,171,10,8
+    LTEXT           "k",IDC_STATIC,197,172,10,8
+    LTEXT           "d",IDC_STATIC,29,204,10,8,NOT WS_VISIBLE
+    LTEXT           "e",IDC_STATIC,10,203,10,8,NOT WS_VISIBLE
+    LTEXT           "f",IDC_STATIC,30,203,10,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_a,50,181,54,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_b,108,181,54,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_c,229,181,54,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_bhk,168,182,54,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_d,7,214,54,18,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_e,1,215,54,18,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    EDITTEXT        IDC_f,4,215,54,18,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "result = a[(λ-λ0)-(λt-λt0)]^2+b[(λ-λ0)-k(λt-λt0)]+C",
+                    IDC_STATIC,16,247,251,9
+END
+
+IDD_ADMINISTRATOR DIALOG DISCARDABLE  0, 0, 322, 259
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "IPAddress1",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,
+                    20,36,108,14
+    PUSHBUTTON      "修改",IDC_modifyIP,143,71,65,25
+    LTEXT           "接收地址",IDC_STATIC,21,22,40,11
+    CONTROL         "数据网络发送",IDC_autoSend,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,145,41,79,21
+    PUSHBUTTON      "报警复位",IDC_reset,244,23,48,26
+    GROUPBOX        "网络设置",IDC_STATIC,14,9,216,168
+    GROUPBOX        "保存",IDC_STATIC,13,180,218,76
+    CONTROL         "保存结果",IDC_saveResult,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,23,195,47,16
+    CONTROL         "波长记录间隔",IDC_sampleCheck,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,82,194,61,18
+    EDITTEXT        IDC_saveSample,148,193,54,28,ES_AUTOHSCROLL
+    LTEXT           "帧",IDC_STATIC,212,200,12,16
+    PUSHBUTTON      "设置",IDC_set,65,223,53,26
+    CONTROL         "发送帧间隔",IDC_UdpSendChoice,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,21,113,56,16
+    EDITTEXT        IDC_udpSendFrame,84,112,43,20,ES_AUTOHSCROLL
+    LTEXT           "本机ID",IDC_STATIC,136,115,28,12
+    EDITTEXT        IDC_pcID,169,107,42,22,ES_AUTOHSCROLL
+    CONTROL         "加速度计数据发送",IDC_sendFFTBuffer,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,22,141,84,19
+    GROUPBOX        "网络数据发送选项",IDC_STATIC,14,98,216,79
+    LTEXT           "接收端口号",IDC_STATIC,21,58,50,11
+    EDITTEXT        IDC_addressPort,21,70,50,17,ES_AUTOHSCROLL
+END
+
+IDD_ALARMINFORM DIALOG DISCARDABLE  0, 0, 335, 282
+STYLE WS_CHILD
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "查询历史报警信息",IDC_CHECKALARM,20,2,70,13
+    CONTROL         "List1",IDC_LIST3,"SysListView32",LVS_SMALLICON | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,1,16,327,259
+END
+
+IDD_CHECKHISTORYALARM DIALOG DISCARDABLE  0, 0, 319, 282
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "历史报警信息查询"
+FONT 10, "宋体"
+BEGIN
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_SMALLICON | 
+                    WS_BORDER | WS_TABSTOP,7,21,310,248
+    PUSHBUTTON      "前一页",IDC_before,37,7,50,14
+    PUSHBUTTON      "退出",IDC_Exit,178,7,50,14
+    PUSHBUTTON      "下一页",IDC_next,93,7,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Si216Client Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Si216Client\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2012\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Si216Client.EXE\0"
+            VALUE "ProductName", "Si216Client 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SI216CLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 415
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_WaveSheet, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 335
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 211
+    END
+
+    IDD_ParaSet, DIALOG
+    BEGIN
+        RIGHTMARGIN, 349
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_ADMINISTRATOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 313
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_ALARMINFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 328
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 275
+    END
+
+    IDD_CHECKHISTORYALARM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 Si216Client(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\Si216Client.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
